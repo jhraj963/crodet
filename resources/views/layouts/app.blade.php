@@ -3,51 +3,165 @@
 
 <head>
     <meta charset="utf-8">
-    
+
     <!--====== Title ======-->
     <title>Crodet</title>
-    
+
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
-        
+
     <!--====== Magnific Popup CSS ======-->
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        
+
     <!--====== Slick CSS ======-->
     <link rel="stylesheet" href="assets/css/slick.css">
-        
+
     <!--====== Font Awesome CSS ======-->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-        
+
     <!--====== Line Icons CSS ======-->
     <link rel="stylesheet" href="assets/css/LineIcons.css">
-        
+
     <!--====== Animate CSS ======-->
     <link rel="stylesheet" href="assets/css/animate.css">
-        
+
     <!--====== Bootstrap CSS ======-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    
+
     <!--====== Default CSS ======-->
     <link rel="stylesheet" href="assets/css/default.css">
-    
+
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
+<style>
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fff;
+}
+
+#page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* FIX */
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+}
+
+
+#h3 {
+  color: rgb(82, 79, 79);
+  font-size: 2em;
+  font-weight: bold;
+  position: relative;
+  z-index: 10;
+}
+
+.ring {
+  width: 190px;
+  height: 190px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.ring:nth-child(1) {
+  border-bottom: 8px solid rgb(240, 42, 230);
+  animation: rotate1 2s linear infinite;
+}
+
+@keyframes rotate1 {
+  from { transform: rotateX(50deg) rotateZ(110deg); }
+  to { transform: rotateX(50deg) rotateZ(470deg); }
+}
+
+.ring:nth-child(2) {
+  border-bottom: 8px solid rgb(240, 19, 67);
+  animation: rotate2 2s linear infinite;
+}
+
+@keyframes rotate2 {
+  from { transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg); }
+  to { transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg); }
+}
+
+.ring:nth-child(3) {
+  border-bottom: 8px solid rgb(3, 170, 170);
+  animation: rotate3 2s linear infinite;
+}
+
+@keyframes rotate3 {
+  from { transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg); }
+  to { transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg); }
+}
+
+.ring:nth-child(4) {
+  border-bottom: 8px solid rgb(207, 135, 1);
+  animation: rotate4 2s linear infinite;
+}
+
+@keyframes rotate4 {
+  from { transform: rotateX(70deg) rotateZ(270deg); }
+  to { transform: rotateX(70deg) rotateZ(630deg); }
+}
+
+/* For Marquee */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: scroll 5s linear infinite;
+}
+
+.marquee-content img {
+  height: 60px;
+  width: auto;
+  margin: 0 40px;
+  object-fit: contain;
+}
+
+/* Continuous loop animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+</style>
 </head>
 
 <body>
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-   
-   
+
+
     <!--====== PRELOADER PART START ======-->
 
-    <div class="preloader">
+    {{--  <div class="preloader">
         <div class="loader">
             <div class="ytp-spinner">
                 <div class="ytp-spinner-container">
@@ -62,18 +176,31 @@
                 </div>
             </div>
         </div>
+    </div>  --}}
+
+    <div class="preloader">
+    <!-- From Uiverse.io by Vazafirst -->
+        <div id="page">
+            <div id="container">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div id="h3">Crodet</div>
+            </div>
+        </div>
     </div>
 
     <!--====== PRELOADER PART ENDS ======-->
-    
+
     <!--====== HEADER PART START ======-->
-    
+
     @include('layouts.header')
-    
+
     <!--====== HEADER PART ENDS ======-->
 
     <!--====== SERVICE PART START ======-->
-    
+
     <section id="service" class="service-area pt-90">
         <div class="container">
             <div class="service">
@@ -82,13 +209,13 @@
                         <div class="single-services wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                             <div class="services-shape"></div>
                             <div class="services-separator"></div>
-                            
+
                             <div class="services-items services-color-1 d-sm-flex">
                                 <div class="services-icon">
                                     <i class="lni-layout"></i>
                                 </div>
                                 <div class="services-content media-body">
-                                    <h5 class="title">Web Design</h5>
+                                    <h5 class="title">Web Development</h5>
                                     <p class="text">It is a long established fact that a reader will be distracted by the readable content.</p>
                                 </div>
                             </div> <!-- services items -->
@@ -98,7 +225,7 @@
                         <div class="single-services services-active wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
                             <div class="services-shape"></div>
                             <div class="services-separator"></div>
-                            
+
                             <div class="services-items services-color-2 d-sm-flex">
                                 <div class="services-icon">
                                     <i class="lni-vector"></i>
@@ -114,7 +241,7 @@
                         <div class="single-services wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
                             <div class="services-shape"></div>
                             <div class="services-separator"></div>
-                            
+
                             <div class="services-items services-color-3 d-sm-flex">
                                 <div class="services-icon">
                                     <i class="lni-blackboard"></i>
@@ -130,11 +257,11 @@
             </div> <!-- service -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== SERVICE PART ENDS ======-->
-    
+
     <!--====== ABOUT PART START ======-->
-    
+
     <section id="about" class="about-area pt-110 pb-120">
         <div class="container">
             <div class="row justify-content-center">
@@ -194,9 +321,9 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== ABOUT PART ENDS ======-->
-    
+
     <!--====== ANALYSIS PART START ======-->
 
     <section class="analysis-area pt-115 pb-120 bg_cover" style="background-image: url(assets/images/analysis.jpg)">
@@ -240,7 +367,7 @@
     </section>
 
     <!--====== ANALYSIS PART ENDS ======-->
-    
+
     <!--====== PROJECT GALLERY PART START ======-->
 
     <section id="portfolio" class="project-masonry-area pt-115 pb-120">
@@ -256,10 +383,10 @@
     </section>
 
     <!--====== PROJECT GALLERY PART ENDS ======-->
-    
-    
+
+
     <!--====== APP DOWNLOAD PART START ======-->
-    
+
     <section id="app" class="app-download-area bg_cover pt-110 pb-120" style="background-image: url(assets/images/app-bg.jpg)">
         <div class="app-shape-1">
             <img src="assets/images/shape/app-shape-1.png" alt="shape">
@@ -281,12 +408,12 @@
             <img src="assets/images/shape/app-shape-2.png" alt="shape">
         </div> <!-- app shape -->
     </section>
-    
+
     <!--====== APP DOWNLOAD PART ENDS ======-->
 
 
     <!--====== TESTIMONIAL PART START ======-->
-    
+
     <section id="testimonial" class="testimonial-area pt-70">
         <div class="container">
                         <div class="header-hero-content text-center">
@@ -298,12 +425,12 @@
                         </div> <!-- header hero content -->
         </div> <!-- container -->
     </section>
-    
+
     <!--====== TESTIMONIAL PART ENDS ======-->
-    
+
         <!--====== BRAND PART START ======-->
-    
-    <div id="brands" class="brand-area pb-100">
+
+    {{-- <div id="brands" class="brand-area pb-100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -327,10 +454,30 @@
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
+    </div> --}}
+    <div id="brands" class="brand-area pb-100">
+        <div class="container">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <img src="assets/images/brand-1.png" alt="">
+                    <img src="assets/images/brand-2.png" alt="">
+                    <img src="assets/images/brand-3.png" alt="">
+                    <img src="assets/images/brand-4.png" alt="">
+                    <img src="assets/images/brand-5.png" alt="">
+
+                    <!-- Duplicate row for smooth infinite loop -->
+                    <img src="assets/images/brand-1.png" alt="">
+                    <img src="assets/images/brand-2.png" alt="">
+                    <img src="assets/images/brand-3.png" alt="">
+                    <img src="assets/images/brand-4.png" alt="">
+                    <img src="assets/images/brand-5.png" alt="">
+                </div>
+            </div>
+        </div>
     </div>
-    
+
     <!--====== BRAND PART ENDS ======-->
-    
+
 
     <!--====== BLOG PART START ======-->
 
@@ -347,33 +494,33 @@
     </section>
 
     <!--====== BLOG PART ENDS ======-->
-    
+
     <!--====== FOOTER PART START ======-->
-    
+
     @include('layouts.footer')
-    
+
     <!--====== FOOTER PART ENDS ======-->
-    
+
     <!--====== BACK TOP TOP PART START ======-->
 
     <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
 
-    <!--====== BACK TOP TOP PART ENDS ======-->   
-    
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
     <!--====== PART START ======-->
-    
+
 <!--
     <section class="">
         <div class="container">
             <div class="row">
                 <div class="col-lg-">
-                    
+
                 </div>
             </div>
         </div>
     </section>
 -->
-    
+
     <!--====== PART ENDS ======-->
 
     <!-- row -->
@@ -382,30 +529,30 @@
     <!--====== Jquery js ======-->
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
-    
+
     <!--====== Bootstrap js ======-->
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    
-    
+
+
     <!--====== Counter Up js ======-->
     <script src="assets/js/waypoints.min.js"></script>
     <script src="assets/js/jquery.counterup.min.js"></script>
-    
+
     <!--====== WOW js ======-->
     <script src="assets/js/wow.min.js"></script>
-    
+
     <!--====== Scrolling Nav js ======-->
     <script src="assets/js/jquery.easing.min.js"></script>
     <script src="assets/js/scrolling-nav.js"></script>
-    
+
     <!--====== Scroll It js ======-->
     <script src="assets/js/scrollIt.min.js"></script>
-    
-    
+
+
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
-    
+
 </body>
 
 </html>
