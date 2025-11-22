@@ -38,6 +38,28 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
 <style>
+/* Default logo (no background) */
+
+
+/* Default logo */
+.navbar-brand {
+    transition: 0.3s;
+    display: inline-block;
+}
+
+/* When scrolled */
+.navbar.scrolled .navbar-brand {
+    background-color: #2a10ec; /* green */
+    border-radius: 5px;        /* optional rounded corners */
+    padding: 0;                /* remove extra padding */
+}
+.navbar-brand img {
+    display: block;
+    height: auto;
+    width: auto;   /* keep original size */
+    margin: 0;     /* remove any margin */
+}
+
 .preloader {
   display: flex;
   justify-content: center;
@@ -370,13 +392,13 @@
 
     <!--====== PROJECT GALLERY PART START ======-->
 
-    <section id="portfolio" class="project-masonry-area pt-115 pb-120">
+ <section id="portfolio" class="project-masonry-area pt-115 pb-120">
         <div class="container">
                         <div class="header-hero-content text-center">
                             <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">You are using free lite version of Explore</h1>
                             <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Please, purchase full version of the template to get all sections, features and commercial license</p>
                         <div class="navbar-btn d-none d-sm-inline-block">
-                         <a class="main-btn" href="https://rebrand.ly/explore-ud">Purchase Now</a>
+                         <a class="main-btn" href=""></a>
                         </div>
                         </div> <!-- header hero content -->
         </div> <!-- container -->
@@ -552,6 +574,16 @@
 
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
+    <script>
+    window.addEventListener("scroll", function() {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 20) {   // adjust scroll distance
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+    </script>
 
 </body>
 

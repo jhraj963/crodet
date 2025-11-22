@@ -48,9 +48,10 @@
                                 <p class="text">Kamal gate, East Madarbari, <br> Chittagong, Bangladesh, 4000</p>
                                 <p class="text">support@crodet.com</p>
                                 <p class="text">+880 1934-480686</p>
+                                <p class="text">+880 1572-378254</p>
 
                                 <ul class="social mt-40">
-                                    <li><a href="#"><i class="lni-facebook"></i></a></li>
+                                    <li><a href="https://www.facebook.com/crodet.agency/" target="_blank"><i class="lni-facebook"></i></a></li>
                                     <li><a href="#"><i class="lni-twitter"></i></a></li>
                                     <li><a href="#"><i class="lni-instagram"></i></a></li>
                                     <li><a href="#"><i class="lni-linkedin"></i></a></li>
@@ -61,7 +62,7 @@
                 </div> <!-- row -->
             </div> <!-- footer widget -->
             <div class="footer-copyright text-center">
-                <p class="text">© 2022 Crafted by <a href="https://uideck.com" rel="nofollow">UIdeck</a> All Rights Reserved.</p>
+                <p class="text">© 2025 Crafted by <a href="https://crodet.com/" rel="nofollow">Crodet</a> All Rights Reserved.</p>
             </div>
         </div> <!-- container -->
     </footer>
