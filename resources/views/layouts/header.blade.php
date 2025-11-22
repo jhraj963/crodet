@@ -31,6 +31,9 @@
                                         <a class="page-scroll" href="#testimonial">Clients</a>
                                     </li>
                                     <li class="nav-item">
+                                        <a class="page-scroll" href="#team">Team</a>
+                                    </li>
+                                    <li class="nav-item">
                                         <a class="page-scroll" href="#blog">Blog</a>
                                         <ul class="sub-menu">
                                             <li><a href="blog.html">Blog</a></li>
@@ -39,7 +42,7 @@
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
-                            
+
                             {{-- <div class="navbar-btn d-none d-sm-inline-block">
                                 <a class="main-btn" data-scroll-nav="0" href="#pricing">Download</a>
                             </div> --}}
@@ -48,16 +51,16 @@
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- navbar area -->
-        
+
         <div id="home" class="header-hero bg_cover d-lg-flex align-items-center" style="background-image: url(assets/images/header-hero.jpg)">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="header-hero-content">
-                            <h1 class="hero-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">You are using free lite version of Explore</h1>
-                            <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Please, purchase full version of the template to get all sections, features and commercial license</p>
+                            <h1 class="hero-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">Everything You Need to Grow Online.</h1>
+                            <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">A full-service digital agency offering Web Development, Graphics Design, and Digital Marketing solutions to help your business grow.</p>
                             <div class="header-play wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
-                                <a class="play-btn" href="https://rebrand.ly/explore-ud">Purchase Now <i class="lni-cart-full"></i></a>
+                                {{--  <a class="play-btn" href="https://rebrand.ly/explore-ud">Purchase Now <i class="lni-cart-full"></i></a>  --}}
                             </div>
                         </div> <!-- header hero content -->
                     </div>

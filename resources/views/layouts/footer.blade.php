@@ -10,8 +10,8 @@
                             <a href="#">
                                 <img src="assets/images/logo.png" alt="Logo">
                             </a>
-                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, repudiandae! Totam, nemo sed? Provident.</p>
-                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p class="text">A full-service digital agency offering Web Development, Graphics Design, and Digital Marketing solutions to help your business grow.</p>
+                            {{--  <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>  --}}
                         </div> <!-- footer about -->
                     </div>
                     <div class="col-lg-3 col-sm-6 order-sm-3 order-lg-2">
@@ -23,6 +23,7 @@
                                 <li><a href="#">Web Development</a></li>
                                 <li><a href="#">Graphic Design</a></li>
                                 <li><a href="#">Business Consultancy</a></li>
+                                <li><a href="#">Digital Marketing</a></li>
                             </ul>
                         </div> <!-- footer link -->
                     </div>

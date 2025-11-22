@@ -450,6 +450,23 @@
 
     <!--====== TESTIMONIAL PART ENDS ======-->
 
+
+    <!--====== Team PART START ======-->
+
+    <section id="team" class="team-area pt-70">
+        <div class="container">
+                        <div class="header-hero-content text-center">
+                            <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">You are using free lite version of Explore</h1>
+                            <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Please, purchase full version of the template to get all sections, features and commercial license</p>
+                        <div class="navbar-btn d-none d-sm-inline-block">
+                         <a class="main-btn" href="https://rebrand.ly/explore-ud">Purchase Now</a>
+                        </div>
+                        </div> <!-- header hero content -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== Team PART ENDS ======-->
+
         <!--====== BRAND PART START ======-->
 
     {{-- <div id="brands" class="brand-area pb-100">
