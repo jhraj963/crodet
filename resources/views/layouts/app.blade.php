@@ -41,25 +41,6 @@
 /* Default logo (no background) */
 
 
-/* Default logo */
-.navbar-brand {
-    transition: 0.3s;
-    display: inline-block;
-}
-
-/* When scrolled */
-.navbar.scrolled .navbar-brand {
-    background-color: #2a10ec; /* green */
-    border-radius: 5px;        /* optional rounded corners */
-    padding: 0;                /* remove extra padding */
-}
-.navbar-brand img {
-    display: block;
-    height: auto;
-    width: auto;   /* keep original size */
-    margin: 0;     /* remove any margin */
-}
-
 .preloader {
   display: flex;
   justify-content: center;
