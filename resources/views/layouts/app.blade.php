@@ -55,7 +55,7 @@
 
 <body>
 
-    <div class="preloader">
+    {{-- <div class="preloader">
         <div id="page">
             <div id="container">
                 <div class="ring"></div>
@@ -63,6 +63,17 @@
                 <div class="ring"></div>
                 <div class="ring"></div>
                 <div id="h3">Crodet</div>
+            </div>
+        </div>
+    </div> --}}
+    <!-- Rounded Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/images/X.png" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -178,6 +189,16 @@
                 if (btn) btn.click();
             }
         });
+
+
+         // Hide preloader (Rounded) after page load 
+            window.addEventListener("load", function () {
+                var loader = document.getElementById("preloader-active");
+                loader.style.opacity = "0";
+                setTimeout(function () {
+                    loader.style.display = "none";
+                }, 500); // smooth fade out
+            });
     </script>
 
 </body>

@@ -563,3 +563,45 @@
         margin-bottom: 30px;
     }
 }
+
+
+/* For Round Preloader */
+
+/* Preloader Container */
+#preloader-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main preloader animation circle */
+.preloader-circle {
+    width: 80px;
+    height: 80px;
+    border: 6px solid #f0f0f0;
+    border-top: 6px solid #ff6600; /* loader color */
+    border-radius: 50%;
+    animation: loader-spin 1s linear infinite;
+}
+
+/* Center logo */
+.preloader-img img {
+    width: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Animation */
+@keyframes loader-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
